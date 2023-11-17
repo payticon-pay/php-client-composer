@@ -1,6 +1,7 @@
 <?php
 namespace Paycadoo;
 use Paycadoo\clients\OrderClient;
+use Paycadoo\clients\RefundClient;
 use Paycadoo\clients\SubscriptionClient;
 
 class Client {
@@ -8,6 +9,10 @@ class Client {
 	* @var OrderClient	
 	**/
 	public $order;
+	/**
+	* @var RefundClient	
+	**/
+	public $refund;
 	/**
 	* @var SubscriptionClient	
 	**/
@@ -20,6 +25,7 @@ class Client {
 	{
 		$httpClient = new HttpClient($url, $apiKey);
 		$this->order = new OrderClient($httpClient);
+		$this->refund = new RefundClient($httpClient);
 		$this->subscription = new SubscriptionClient($httpClient);
 		
 	}
