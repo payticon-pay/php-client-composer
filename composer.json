@@ -2,7 +2,7 @@
   "name": "paycadoo/client",
   "autoload": {
     "psr-4": {
-      "Paycadoo": "/"
+      "Paycadoo//": "/"
     }
   },
   "authors": [
