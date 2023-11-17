@@ -3,6 +3,7 @@ namespace Paycadoo\clients;
 use Paycadoo\HttpClient;
 use Paycadoo\models\Subscription;
 use Exception;
+
 class SubscriptionClient {
 	/**
 	* @var HttpClient	

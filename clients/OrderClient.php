@@ -5,6 +5,7 @@ use Paycadoo\models\OrderWithPaywallUrl;
 use Paycadoo\models\Order;
 use Paycadoo\models\Refund;
 use Exception;
+
 class OrderClient {
 	/**
 	* @var HttpClient	

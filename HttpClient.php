@@ -1,6 +1,7 @@
 <?php
 namespace Paycadoo;
 use Exception;
+
 class HttpClient {
 	/**
 	* @var string	

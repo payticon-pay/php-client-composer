@@ -2,6 +2,7 @@
 namespace Paycadoo;
 use Paycadoo\clients\OrderClient;
 use Paycadoo\clients\SubscriptionClient;
+
 class Client {
 	/**
 	* @var OrderClient	
