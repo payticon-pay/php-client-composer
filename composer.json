@@ -1,0 +1,18 @@
+{
+  "name": "paycadoo/client",
+  "autoload": {
+    "psr-4": {
+      "Paycadoo": "/"
+    }
+  },
+  "authors": [
+    {
+      "name": "krs",
+      "email": "k.kamasa@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
