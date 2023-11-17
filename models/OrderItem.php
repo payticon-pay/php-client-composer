@@ -3,20 +3,25 @@ namespace Paycadoo\models;
 
 class OrderItem {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $id;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $name;
 	/**
-	* @var integer	**/
+	* @var integer	
+	**/
 	public $qty;
 	/**
-	* @var integer	**/
+	* @var integer	
+	**/
 	public $price;
 	/**
 	* @param array $array
-	* @return self	**/
+	* @return self	
+	**/
 	public static function create(array $array): self
 	{
 		$model = new self();
@@ -30,7 +35,8 @@ class OrderItem {
 
 	/**
 	* @param array $array
-	* @return self[]	**/
+	* @return self[]	
+	**/
 	public static function createList(array $array): array
 	{
 		$list = array();

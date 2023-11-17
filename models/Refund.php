@@ -3,23 +3,29 @@ namespace Paycadoo\models;
 
 class Refund {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $id;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $status;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $reason;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $merchantId;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $paymentId;
 	/**
 	* @param array $array
-	* @return self	**/
+	* @return self	
+	**/
 	public static function create(array $array): self
 	{
 		$model = new self();
@@ -34,7 +40,8 @@ class Refund {
 
 	/**
 	* @param array $array
-	* @return self[]	**/
+	* @return self[]	
+	**/
 	public static function createList(array $array): array
 	{
 		$list = array();

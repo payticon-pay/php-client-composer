@@ -4,14 +4,17 @@ use Paycadoo\clients\OrderClient;
 use Paycadoo\clients\SubscriptionClient;
 class Client {
 	/**
-	* @var OrderClient	**/
+	* @var OrderClient	
+	**/
 	public $order;
 	/**
-	* @var SubscriptionClient	**/
+	* @var SubscriptionClient	
+	**/
 	public $subscription;
 	/**
 	* @param string $apiKey
-	* @param string $url	**/
+	* @param string $url	
+	**/
 	public function __construct(string $apiKey, string $url = "https://pay.payticon.com")
 	{
 		$httpClient = new HttpClient($url, $apiKey);

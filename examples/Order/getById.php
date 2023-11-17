@@ -2,7 +2,8 @@
 /**
 * This endpoint allows you to retrieve detailed information about an order based on its unique identifier (ID).
 * To use this endpoint, simply provide the appropriate order ID as a route parameter.
-* **/
+* 
+**/
 
 use Paycadoo\Client;
 

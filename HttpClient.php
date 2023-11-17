@@ -3,14 +3,17 @@ namespace Paycadoo;
 use Exception;
 class HttpClient {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	protected $url;
 	/**
-	* @var array[string]string	**/
+	* @var array[string]string	
+	**/
 	protected $headers;
 	/**
 	* @param string $url
-	* @param string $apiKey	**/
+	* @param string $apiKey	
+	**/
 	public function __construct(string $url, string $apiKey)
 	{
 		$this->url = $url;
@@ -24,7 +27,8 @@ class HttpClient {
 	* @param string $path
 	* @param array $query
 	* @return array
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function get(string $path, array $query = array()): array
 	{
 		$url = $this->url . $path;
@@ -41,7 +45,8 @@ class HttpClient {
 	* @param string $path
 	* @param array $data
 	* @return array
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function post(string $path, array $data): array
 	{
 		$curl = curl_init($this->url . $path);
@@ -55,7 +60,8 @@ class HttpClient {
 	/**
 	* @param resource $curl
 	* @return array
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	protected function execute($curl): array
 	{
 		$body = json_decode(curl_exec($curl), true);

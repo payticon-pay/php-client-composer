@@ -3,35 +3,45 @@ namespace Paycadoo\models;
 
 class Subscription {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $id;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $title;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $customerId;
 	/**
-	* @var boolean	**/
+	* @var boolean	
+	**/
 	public $isActive;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $lastBillingDate;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $currentBillingDate;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $interval;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $webhookUrl;
 	/**
-	* @var array	**/
+	* @var array	
+	**/
 	public $items;
 	/**
 	* @param array $array
-	* @return self	**/
+	* @return self	
+	**/
 	public static function create(array $array): self
 	{
 		$model = new self();
@@ -50,7 +60,8 @@ class Subscription {
 
 	/**
 	* @param array $array
-	* @return self[]	**/
+	* @return self[]	
+	**/
 	public static function createList(array $array): array
 	{
 		$list = array();

@@ -3,20 +3,25 @@ namespace Paycadoo\models;
 
 class Customer {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $id;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $firstName;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $lastName;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $email;
 	/**
 	* @param array $array
-	* @return self	**/
+	* @return self	
+	**/
 	public static function create(array $array): self
 	{
 		$model = new self();
@@ -30,7 +35,8 @@ class Customer {
 
 	/**
 	* @param array $array
-	* @return self[]	**/
+	* @return self[]	
+	**/
 	public static function createList(array $array): array
 	{
 		$list = array();

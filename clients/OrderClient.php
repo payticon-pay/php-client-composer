@@ -7,10 +7,12 @@ use Paycadoo\models\Refund;
 use Exception;
 class OrderClient {
 	/**
-	* @var HttpClient	**/
+	* @var HttpClient	
+	**/
 	protected $httpClient;
 	/**
-	* @param HttpClient $httpClient	**/
+	* @param HttpClient $httpClient	
+	**/
 	public function __construct(HttpClient $httpClient)
 	{
 		$this->httpClient = $httpClient;
@@ -51,7 +53,8 @@ class OrderClient {
 	*   }
 	* } $data
 	* @return OrderWithPaywallUrl
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function create(array $data): OrderWithPaywallUrl
 	{
 		return OrderWithPaywallUrl::create($this->httpClient->post("/api/v1/orders", $data));
@@ -63,7 +66,8 @@ class OrderClient {
 	* 
 	* @param string $orderId
 	* @return Order
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function getById(string $orderId): Order
 	{
 		return Order::create($this->httpClient->get("/api/v1/orders/$orderId"));
@@ -80,7 +84,8 @@ class OrderClient {
 	*   order_by: "asc"|"desc"
 	* } $options
 	* @return Order[]
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function get(array $options = array()): array
 	{
 		return Order::createList($this->httpClient->get("/api/v1/orders", $options));
@@ -98,7 +103,8 @@ class OrderClient {
 	*   reason: string
 	* } $data
 	* @return Refund[]
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function refund(string $orderId, array $data): array
 	{
 		return Refund::createList($this->httpClient->post("/api/v1/orders/$orderId/refund", $data));
@@ -116,7 +122,8 @@ class OrderClient {
 	*   order_by: "asc"|"desc"
 	* } $options
 	* @return Refund[]
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function getRefunds(string $orderId, array $options = array()): array
 	{
 		return Refund::createList($this->httpClient->get("/api/v1/orders/$orderId/refund", $options));

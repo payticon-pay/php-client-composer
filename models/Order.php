@@ -3,41 +3,53 @@ namespace Paycadoo\models;
 
 class Order {
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $id;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $status;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $merchantId;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $webhookUrl;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $createdAt;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $updatedAt;
 	/**
-	* @var integer	**/
+	* @var integer	
+	**/
 	public $price;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $currency;
 	/**
-	* @var object	**/
+	* @var object	
+	**/
 	public $customer;
 	/**
-	* @var string	**/
+	* @var string	
+	**/
 	public $title;
 	/**
-	* @var array	**/
+	* @var array	
+	**/
 	public $items;
 	/**
 	* @param array $array
-	* @return self	**/
+	* @return self	
+	**/
 	public static function create(array $array): self
 	{
 		$model = new self();
@@ -58,7 +70,8 @@ class Order {
 
 	/**
 	* @param array $array
-	* @return self[]	**/
+	* @return self[]	
+	**/
 	public static function createList(array $array): array
 	{
 		$list = array();

@@ -11,7 +11,8 @@
 * In essence, the Create Order endpoint not only kickstarts the payment process
 * but also hands users the golden ticket in the form of a paywallUrl,
 * paving the way for a smooth and secure payment journey.
-* **/
+* 
+**/
 
 use Paycadoo\Client;
 

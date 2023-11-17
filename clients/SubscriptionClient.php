@@ -5,10 +5,12 @@ use Paycadoo\models\Subscription;
 use Exception;
 class SubscriptionClient {
 	/**
-	* @var HttpClient	**/
+	* @var HttpClient	
+	**/
 	protected $httpClient;
 	/**
-	* @param HttpClient $httpClient	**/
+	* @param HttpClient $httpClient	
+	**/
 	public function __construct(HttpClient $httpClient)
 	{
 		$this->httpClient = $httpClient;
@@ -28,7 +30,8 @@ class SubscriptionClient {
 	*   order_by: "asc"|"desc"
 	* } $options
 	* @return Subscription[]
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function get(array $options = array()): array
 	{
 		return Subscription::createList($this->httpClient->get("/api/v1/subscriptions", $options));
@@ -43,7 +46,8 @@ class SubscriptionClient {
 	* 
 	* @param string $subscriptionId
 	* @return Subscription
-	* @throws Exception	**/
+	* @throws Exception	
+	**/
 	public function getById(string $subscriptionId): Subscription
 	{
 		return Subscription::create($this->httpClient->get("/api/v1/subscriptions/:id"));
